@@ -1,6 +1,6 @@
 {
   "name": "@dulysse1/better-stripe",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Init local instance & multi-instance of Stripe 🔱",
   "main": "index.js",
   "directories": {
