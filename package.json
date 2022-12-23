@@ -18,6 +18,14 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
+  "mocha": {
+    "recursive": true,
+    "extension": [
+      "ts",
+      "js",
+      "tsx"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dulysse/better-stripe.git"
@@ -51,6 +59,8 @@
   "devDependencies": {
     "@types/node": "^18.11.17",
     "assert": "^2.0.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
     "eslint": "^8.30.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
