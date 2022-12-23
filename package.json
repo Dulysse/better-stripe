@@ -1,6 +1,6 @@
 {
   "name": "@dulysse1/better-stripe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Init local instance & multi-instance of Stripe 🔱",
   "main": "index.js",
   "directories": {
@@ -14,7 +14,7 @@
     "lint": "npx eslint --fix .",
     "update": "ncu -u && yarn",
     "prepare": "husky install",
-    "demo": "node ./tests/test.js" 
+    "demo": "node ./tests/test.js"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
