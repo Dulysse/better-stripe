@@ -97,5 +97,5 @@ export declare const Stripe = {
 	 * @param {boolean} strictMode allow strict secret key check @default true
 	 * @returns {StripeService} Your Stripe specified instance
 	 */
-	store: (stripeSecretKey: string, strictMode: boolean) => new StripeService(),
+	store: (stripeSecretKey: string, strictMode?: boolean) => new StripeService(),
 };
