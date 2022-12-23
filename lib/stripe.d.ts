@@ -68,7 +68,7 @@ declare class StripeService {
 	public uploadImage(
 		data: Buffer,
 		name: string,
-		type: string
+		type?: string
 	): Promise<S.Response<S.FileLink>>;
 
 	/**

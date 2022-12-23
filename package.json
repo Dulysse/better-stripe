@@ -23,8 +23,7 @@
     "recursive": true,
     "extension": [
       "ts",
-      "js",
-      "tsx"
+      "js"
     ]
   },
   "repository": {
