@@ -13,11 +13,12 @@
 ### Architecture 🏗
 
 ```
-/stripe-v2
+/better-stripe
   --/lib
       --/hook.js : Stripe hooks initialized here
       --/setup.js : private methods and set up
       --/stripe.js : file called to initialize stripe instance
+			--/stripe.d.ts : type definition of stripe file for typescript
   --/index.js : initialization of stripe instance
 ```
 
@@ -26,13 +27,13 @@
 ### With commonJS
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 ```
 
 ### With ES6 and more
 
 ```jsx
-import { Stripe } from "path/to/folder/stripe-v2";
+import { Stripe } from "@dulysse1/better-stripe";
 ```
 
 ## Documentation 🧗
@@ -42,15 +43,15 @@ import { Stripe } from "path/to/folder/stripe-v2";
 #### Default instance 🔥
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 
-Stripe.default; // use Stripe secret key in .env file (STRIPE_API_SECRET)
+Stripe.main; // use Stripe secret key in .env file (STRIPE_API_SECRET)
 ```
 
 #### Dynamic instance ⚡️
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 
 Stripe.store("sk_stripe"); // use specific Stripe secret key !
 ```
@@ -60,9 +61,9 @@ Stripe.store("sk_stripe"); // use specific Stripe secret key !
 #### Get Stripe initialized 🔋
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 
-const stripe = Stripe.default.getInstance();
+const stripe = Stripe.main.getInstance();
 console.log(stripe);
 ```
 
@@ -73,7 +74,7 @@ console.log(stripe);
 #### Upload Image to Stripe 🌄
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 const fs = require("fs");
 const fileBuffer = fs.readFileSync("./file.png");
 
@@ -91,9 +92,9 @@ console.log(url);
 #### List Stripe customers 🧑‍💻
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 
-const { data } = await Stripe.default.listCustomers();
+const { data } = await Stripe.main.listCustomers();
 console.log(data);
 ```
 
@@ -104,9 +105,9 @@ console.log(data);
 #### Create a new Stripe customer 🧑‍💻
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 
-const { id } = await Stripe.default.createCustomer({
+const { id } = await Stripe.main.createCustomer({
 	name: "customer_name",
 	email: "customer_email",
 	description: "customer_description",
@@ -122,7 +123,7 @@ console.log(id);
 #### List Stripe products 🥕
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 
 const { data } = await Stripe.store("sk_stripe").listProduct();
 console.log(data);
@@ -135,9 +136,9 @@ console.log(data);
 #### Create a new Stripe product 🥕
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 
-const { id } = await Stripe.default.createProduct({
+const { id } = await Stripe.main.createProduct({
 	name: "product_name",
 	description: "product_description",
 	images: ["stripe_file_url"],
@@ -153,10 +154,10 @@ console.log(id);
 > "prod_MuMepkWVBITkxl"
 ```
 
-#### Create a new Stripe session checkout 💰
+#### Create a new Stripe session checkout 🧾
 
 ```jsx
-const { Stripe } = require("path/to/folder/stripe-v2");
+const { Stripe } = require("@dulysse1/better-stripe");
 
 const { url } = await Stripe.store("sk_stripe").createCheckout(
 	[
@@ -173,6 +174,24 @@ console.log(url);
 
 ```shell
 > "https://stripe.com/checkout/session/dzedjeojferifozeji4dz5de4zed46"
+```
+
+#### Get balance of Stripe 💸
+
+```jsx
+const { Stripe } = require("@dulysse1/better-stripe");
+
+const balance = await Stripe.main.getBalance();
+console.log(balance);
+```
+
+```shell
+> {
+	object: 'balance',
+	available: [Array],
+	livemode: false,
+	pending: [Array]
+}
 ```
 
 #### ...and more ! ✌️
