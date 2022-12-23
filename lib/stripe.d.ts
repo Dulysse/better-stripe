@@ -30,15 +30,7 @@ declare class StripeService {
 	/**
 	 * ### Creates a new product object.
 	 * @public
-	 * @param {{
-	 *		default_price_data: {
-	 *			currency: "USD" | "EUR";
-	 *			unit_amount_decimal: number;
-	 *		};
-	 *		name: string;
-	 *		description?: string;
-	 *		images?: string[];
-	 *}} data product creation data
+	 * @param data product creation data
 	 */
 	public createProduct(data: {
 		default_price_data: {
@@ -105,5 +97,5 @@ export declare const Stripe = {
 	 * @param {boolean} strictMode allow strict secret key check @default true
 	 * @returns {StripeService} Your Stripe specified instance
 	 */
-	store: (stripeSecretKey: string, strictMode: boolean) => StripeService,
+	store: (stripeSecretKey: string, strictMode: boolean) => new StripeService(),
 };
