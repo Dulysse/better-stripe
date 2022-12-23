@@ -13,7 +13,8 @@
     "format:fix": "prettier . --write",
     "lint": "npx eslint --fix .",
     "update": "ncu -u && yarn",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "demo": "node ./tests/test.js" 
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

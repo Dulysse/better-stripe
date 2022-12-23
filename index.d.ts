@@ -4,4 +4,4 @@
  * @requires @dulysse1/better-node
  * @requires stripe
  */
-export * from "./lib/stripe";
+export { Stripe } from "./lib/stripe";
