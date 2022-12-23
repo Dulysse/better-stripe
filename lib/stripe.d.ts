@@ -12,7 +12,9 @@ declare class StripeService {
 	 * @public
 	 * @param {S.CustomerListParams} params Add parameters to your request
 	 */
-	public listCustomers(params): S.ApiListPromise<S.Customer>;
+	public listCustomers(
+		params: S.CustomerListParams
+	): S.ApiListPromise<S.Customer>;
 
 	/**
 	 * ### Creates a Session object.
