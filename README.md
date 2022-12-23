@@ -201,3 +201,5 @@ console.log(balance);
 Author: Ulysse Dupont @Ulysse
 
 Contact: ulysse@euranov.com
+
+[Help me to improve better-stripe !]("https://github.com/Dulysse/better-stripe/issues/new")
