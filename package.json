@@ -8,13 +8,12 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha ./tests/*.test.js",
+    "test": "mocha ./tests/*.test.js --timeout 10000",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --write",
     "lint": "npx eslint --fix .",
     "update": "ncu -u && yarn",
-    "prepare": "husky install",
-    "demo": "node ./tests/test.js"
+    "prepare": "husky install"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
@@ -66,10 +65,14 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.6.0",
     "eslint-plugin-promise": "^6.1.1",
+    "fetch": "^1.1.0",
+    "fs": "^0.0.1-security",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "mocha": "^10.2.0",
     "npm-check-updates": "^16.6.2",
+    "open": "^8.4.0",
+    "path": "^0.12.7",
     "prettier": "2.8.1"
   }
 }

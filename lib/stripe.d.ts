@@ -13,7 +13,7 @@ declare class StripeService {
 	 * @param {S.CustomerListParams} params Add parameters to your request
 	 */
 	public listCustomers(
-		params: S.CustomerListParams
+		params?: S.CustomerListParams
 	): S.ApiListPromise<S.Customer>;
 
 	/**
@@ -57,7 +57,7 @@ declare class StripeService {
 	 * ### Returns a list of your products. The products are returned sorted by creation date, with the most recently created products appearing first.
 	 * @param {S.ProductListParams} params list parameters for products
 	 */
-	public listProduct(params: S.ProductListParams): S.ApiListPromise<S.Product>;
+	public listProduct(params?: S.ProductListParams): S.ApiListPromise<S.Product>;
 
 	/**
 	 * ### Creates a new file link object.
@@ -101,3 +101,19 @@ export declare const Stripe = {
 	 */
 	store: (stripeSecretKey: string, strictMode?: boolean) => new StripeService(),
 };
+
+/**
+ * Declare ProcessEnv STRIPE_API_SECRET
+ */
+declare global {
+	namespace NodeJS {
+		interface ProcessEnv {
+			/**
+			 * @override process.env
+			 * ### Your stripe API secret key
+			 * @example STRIPE_API_SECRET="sk_test_..."
+			 */
+			STRIPE_API_SECRET: string;
+		}
+	}
+}
