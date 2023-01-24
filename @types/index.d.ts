@@ -89,9 +89,9 @@ declare module "@dulysse1/better-stripe" {
 	}
 	export = {
 		/**
-		 * ## Stripe Service
+		 * ## 🔱 Stripe Service 🔱
 		 * @description init local instance & multi-instance of Stripe
-		 * @requires @dulysse1/better-node
+		 * @requires better-node
 		 * @requires stripe
 		 * @author Ulysse Dupont
 		 */
