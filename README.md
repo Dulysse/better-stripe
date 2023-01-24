@@ -14,12 +14,12 @@
 
 ```
 /better-stripe
+	--/@types
+		--/index.d.ts: Type definition of the module
   --/lib
       --/hook.js : Stripe hooks initialized here
       --/setup.js : private methods and set up
       --/stripe.js : file called to initialize stripe instance
-			--/stripe.d.ts : type definition of stripe file for typescript
-  --/index.js : initialization of stripe instance
 ```
 
 ## How to use ? 🤔

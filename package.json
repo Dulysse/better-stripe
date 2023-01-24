@@ -2,7 +2,7 @@
   "name": "@dulysse1/better-stripe",
   "version": "1.0.7",
   "description": "Init local instance & multi-instance of Stripe 🔱",
-  "main": "index.js",
+  "main": "lib/stripe.js",
   "directories": {
     "lib": "lib",
     "test": "tests"
@@ -46,33 +46,33 @@
     "url": "https://github.com/Dulysse"
   },
   "license": "MIT",
-  "types": "./index.d.ts",
+  "types": "@types/index.d.ts",
   "bugs": {
     "url": "https://github.com/Dulysse/better-stripe/issues"
   },
   "homepage": "https://github.com/Dulysse/better-stripe#readme",
   "dependencies": {
-    "@dulysse1/better-node": "^2.1.10",
-    "stripe": "^11.5.0"
+    "@dulysse1/better-node": "^2.1.11",
+    "stripe": "^11.7.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.17",
+    "@types/node": "^18.11.18",
     "assert": "^2.0.0",
     "chai": "^4.3.7",
     "dotenv": "^16.0.3",
-    "eslint": "^8.30.0",
+    "eslint": "^8.32.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "fetch": "^1.1.0",
     "fs": "^0.0.1-security",
-    "husky": "^8.0.2",
+    "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "mocha": "^10.2.0",
-    "npm-check-updates": "^16.6.2",
+    "npm-check-updates": "^16.6.3",
     "open": "^8.4.0",
     "path": "^0.12.7",
-    "prettier": "2.8.1"
+    "prettier": "2.8.3"
   }
 }
