@@ -2,7 +2,7 @@
   "name": "@dulysse1/better-stripe",
   "version": "1.0.9",
   "description": "Init local instance & multi-instance of Stripe 🔱",
-  "main": "lib/stripe.js",
+  "main": "dist/stripe.js",
   "directories": {
     "lib": "lib",
     "test": "tests"
@@ -46,7 +46,7 @@
     "url": "https://github.com/Dulysse"
   },
   "license": "MIT",
-  "types": "@types/index.d.ts",
+  "types": "types/module.d.ts",
   "bugs": {
     "url": "https://github.com/Dulysse/better-stripe/issues"
   },

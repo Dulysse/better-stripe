@@ -1,0 +1,8 @@
+tests/
+.husky/
+node_modules/*
+tsconfig.json
+yarn.lock
+.eslintrc.js
+.prettierignore
+.prettierrc.json

@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const open = require("open");
 require("dotenv").config();
-const { Stripe } = require("../");
+const { Stripe } = require("../dist/stripe");
 const { fetchUrl } = require("fetch");
 
 /**
