@@ -32,7 +32,11 @@ declare module "@dulysse1/better-stripe" {
 		public createCheckout(
 			prices: S.Checkout.SessionCreateParams.LineItem[],
 			successUrl: string,
-			cancelUrl: string
+			cancelUrl: string,
+			params?: Omit<
+				S.Checkout.SessionCreateParams,
+				"line_items" | "success_url" | "cancel_url"
+			>
 		): Promise<S.Response<S.Checkout.Session>>;
 
 		/**

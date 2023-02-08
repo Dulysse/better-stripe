@@ -11,12 +11,13 @@ class StripeService extends Setup {
 		return this._stripe.customers.list(params);
 	}
 
-	createCheckout(prices, successUrl, cancelUrl) {
+	createCheckout(prices, successUrl, cancelUrl, params = {}) {
 		return this._stripe.checkout.sessions.create({
 			success_url: successUrl,
 			cancel_url: cancelUrl,
 			line_items: prices,
 			mode: "payment",
+			...params,
 		});
 	}
 
